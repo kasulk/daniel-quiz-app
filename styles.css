@@ -47,14 +47,18 @@ main {
   padding: 15vh 0;
 }
 
-#question-cards-container {
+section#question-cards-container {
+  /* position: relative; */
+
   display: flex;
   flex-direction: column;
 
   padding: 5vh 5vw;
 }
 
-.question-card {
+article.question-card {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -106,6 +110,15 @@ article span.category-tag {
   padding: 1vh 1vw;
   border-radius: 2px;
   /* opacity: 0.5; */
+}
+
+article [class^="fa-"] {
+  position: absolute;
+  /* position: relative; */
+  top: -25px;
+  right: 50px;
+  font-size: 3rem;
+  color: var(--secondary-color);
 }
 
 footer {
