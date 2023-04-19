@@ -19,13 +19,14 @@ html {
 }
 
 body {
+  background-color: var(--primary-color);
   margin: 0;
 }
 
 header {
   position: fixed;
+  top: 0;
   z-index: 1;
-  /* top: 0; */
 
   display: flex; /* combined with childs margin: auto; centers title */
 
@@ -39,12 +40,13 @@ header {
 
 header h1 {
   margin: auto;
+  text-align: center;
 }
 
 main {
-  background-color: var(--primary-color);
   color: var(--primary-color);
-  padding: 15vh 0;
+  margin: 20vh 0;
+  /* padding: 15vh 0; */
 }
 
 section#question-cards-container {
@@ -77,6 +79,7 @@ article.question-card {
 
 .question-card h2 {
   background-color: white;
+  /* min-width: 300px; */
   padding: 4vh 4vw;
   margin: 2vh 2vw;
 }
@@ -101,6 +104,10 @@ article p.answer {
   border-bottom-left-radius: 0;
 }
 
+div.tags-container {
+  align-self: start;
+}
+
 article span.category-tag {
   font-size: 0.75rem;
   /* background-color: var(--primary-color); */
@@ -114,9 +121,9 @@ article span.category-tag {
 
 article [class^="fa-"] {
   position: absolute;
-  /* position: relative; */
-  top: -25px;
-  right: 50px;
+  /* top: -25px; */
+  top: -7.5%;
+  right: 10%;
   font-size: 3rem;
   color: var(--secondary-color);
 }
@@ -138,7 +145,7 @@ footer {
 }
 
 nav {
-  outline: 2px darkblue dashed;
+  /* outline: 2px darkblue dashed; */
   width: 80%;
   height: 100%;
   max-width: 600px;
