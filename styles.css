@@ -147,7 +147,7 @@ footer ul {
 }
 
 footer li {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   /* text-align: center; */
   /* padding: 0; */
 
@@ -167,10 +167,13 @@ footer ul img {
 }
 
 footer li {
-  background-size: 25px;
+  /* background-size: 25px; */
 
-  min-width: 25px;
-  min-height: 25px;
+  /* min-width: 25px; */
+  /* min-height: 25px; */
+
+  /* text-align: center; */
+  /* vertical-align: middle; */
 
   /* padding-top: 5vh; */
 
@@ -180,14 +183,19 @@ footer li {
   /* object-fit: cover; */
 }
 
+[class^="fa-"] {
+  font-size: 2rem;
+  color: var(--secondary-accent-color);
+}
+
 .btn-home {
-  background-image: url(./assets/home.png);
+  /* background-image: url(./assets/home.png); */
 }
 .btn-bookmark {
-  background-image: url(./assets/bookmark_transparent.png);
+  /* background-image: url(./assets/bookmark_transparent.png); */
 }
 .btn-profile {
-  background-image: url(./assets/profile.png);
+  /* background-image: url(./assets/profile.png); */
 }
 
 li {
