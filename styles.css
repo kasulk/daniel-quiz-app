@@ -1,11 +1,22 @@
 :root {
-  --primary-color: #be3144;
-  --secondary-color: #45567d;
-  --primary-accent-color: blanchedalmond;
-  --secondary-accent-color: #45567d;
+  --primary-color: #3a3d40;
+  --secondary-color: #be3144;
+  --primary-accent-color: #45567d;
+  --secondary-accent-color: blanchedalmond;
 }
 
 * {
   box-sizing: border-box;
   outline: 2px dashed red;
+}
+
+body {
+  margin: 0;
+}
+
+header #title {
+  width: 100%;
+  height: 10vh;
+  background-color: var(--secondary-color);
+  color: var();
 }
