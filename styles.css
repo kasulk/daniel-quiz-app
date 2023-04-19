@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #be3144;
+  --secondary-color: #45567d;
+  --primary-accent-color: blanchedalmond;
+  --secondary-accent-color: #45567d;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 2px dashed red;
+}
