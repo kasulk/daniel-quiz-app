@@ -85,11 +85,16 @@ article.question-card {
   border-bottom-right-radius: 20px;
 }
 
-.question-card h2 {
+h2.question {
   background-color: white;
   /* min-width: 300px; */
   padding: 4vh 4vw;
-  margin: 2vh 2vw;
+  /* margin: 2vh 2vw; */
+  width: 90%;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  /* border-bottom-right-radius: 0; */
 }
 
 article * {
@@ -109,7 +114,11 @@ article p.answer {
   background-color: white;
   /* border-radius: 20%; */
   border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-left-radius: 0;
+
+  border-radius: 0;
 }
 
 div.tags-container {
@@ -124,6 +133,7 @@ article span.category-tag {
   color: var(--primary-color);
   padding: 1vh 1vw;
   border-radius: 2px;
+  /* margin-left: 10%; */
   /* opacity: 0.5; */
 }
 
