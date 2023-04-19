@@ -62,6 +62,7 @@ footer {
 nav {
   outline: 2px darkblue dashed;
   width: 80%;
+  height: 100%;
   max-width: 600px;
   /* padding: 0; */
   /* margin: 0; */
@@ -73,6 +74,7 @@ footer ul {
   align-items: center;
 
   list-style: none;
+  height: 100%;
   /* margin: 0; */
   padding: 0;
   margin: 0;
@@ -81,7 +83,7 @@ footer ul {
 
 footer li {
   background-color: blueviolet;
-  text-align: center;
+  /* text-align: center; */
   /* padding: 0; */
 
   /* width: 100%; */
@@ -104,6 +106,8 @@ footer li {
 
   min-width: 25px;
   min-height: 25px;
+
+  /* padding-top: 5vh; */
 
   /* color: white; */
   /* background-color: white; */
