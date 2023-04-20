@@ -146,6 +146,7 @@ article [class^="fa-"] {
   color: var(--secondary-color);
 }
 
+/* comment */
 footer {
   position: fixed;
   z-index: 1;
