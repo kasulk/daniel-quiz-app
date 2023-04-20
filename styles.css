@@ -194,10 +194,6 @@ footer ul {
 }
 
 footer li {
-  /* background-color: blueviolet; */
-  /* text-align: center; */
-  /* padding: 0; */
-
   /* width: 100%; */
   height: 100%;
   /* vertical-align: middle; */
@@ -228,24 +224,9 @@ footer [class^="fa-"] {
 }
 
 .current {
-  /* background-color: var(--primary-color); */
   background-color: var(--secondary-color);
 }
 
-.current [class^="fa-"] {
-  /* color: var(--secondary-color); */
-}
-
-.btn-home {
-  /* background-image: url(./assets/home.png); */
-}
-.btn-bookmark {
-  /* background-image: url(./assets/bookmark_transparent.png); */
-}
-.btn-profile {
-  /* background-image: url(./assets/profile.png); */
-}
-
-li {
-  /* background-image: url(./assets/home.png); */
+footer li[class^="btn-"]:hover {
+  background-color: var(--primary-color)
 }
