@@ -152,8 +152,8 @@ article span.category-tag {
 
 article [class^="fa-"] {
   position: absolute;
-  /* top: -25px; */
-  top: -7.5%;
+  top: -2.5vh;
+  /* top: -5px; */
   right: 10%;
   font-size: 3rem;
   color: var(--secondary-color);
