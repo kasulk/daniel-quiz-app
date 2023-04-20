@@ -51,8 +51,8 @@ header h1 {
 
 main {
   color: var(--primary-color);
-  /* margin: 20% 0 15vh; */
-  margin: max(5rem, 20vh) 0 15vh;
+  margin: 20% 0 15vh;
+  /* margin: max(5rem, 20vh) 0 15vh; */
 
   /* padding: 15vh 0; */
 }
