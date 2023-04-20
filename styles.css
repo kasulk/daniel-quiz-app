@@ -36,13 +36,19 @@ header {
   background-color: var(--secondary-color);
   font-weight: bold;
   color: white;
-
+  
   /* margin-bottom: 5rem; */
 }
 
+header a {
+  text-decoration: none;
+  color: white;
+  
+}
+
 header h1 {
-  margin: auto;
   text-align: center;
+  margin: auto;
   padding: 1rem;
   /* width: 90%; */
   font-size: min(2rem, 8vw);
