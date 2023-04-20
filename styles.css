@@ -85,15 +85,21 @@ article.question-card {
   border-bottom-right-radius: 20px;
 }
 
-h2.question {
+article h2.question,
+article p.answer {
   background-color: white;
-  /* min-width: 300px; */
   padding: 4vh 4vw;
-  /* margin: 2vh 2vw; */
   width: 90%;
+  outline: 2px dashed var(--primary-color);
+  
+}
+
+article h2.question {
   border-radius: 20px;
   border-bottom-left-radius: 0;
   border-top-right-radius: 0;
+  /* min-width: 300px; */
+  /* margin: 2vh 2vw; */
   /* border-bottom-right-radius: 0; */
 }
 
@@ -110,15 +116,16 @@ article button {
 
 article p.answer {
   font-size: 1.5rem;
-  padding: 3vh 3vw;
-  background-color: white;
+  width: 80%;
+  /* padding: 3vh 3vw; */
+  /* background-color: white; */
   /* border-radius: 20%; */
-  border-radius: 20px;
+  /* border-radius: 20px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0; */
 
-  border-radius: 0;
+  /* border-radius: 0; */
 }
 
 div.tags-container {
@@ -131,8 +138,8 @@ article span.category-tag {
   background-color: #ccc;
   /* color: var(--secondary-accent-color); */
   color: var(--primary-color);
-  padding: 1vh 1vw;
-  border-radius: 2px;
+  padding: 0.5vh 0.75vw;
+  border-radius: 5px;
   /* margin-left: 10%; */
   /* opacity: 0.5; */
 }
