@@ -92,8 +92,10 @@ article.question-card,
 
   text-align: center;
 
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px 20px;
+
+  /* border-top-left-radius: 20px; */
+  /* border-bottom-right-radius: 20px; */
 
   box-shadow: 5px 5px 5px black;
 }
@@ -300,7 +302,8 @@ footer li[class^="btn-"]:hover {
   height: 100px;
   width: 100px;
   /* object-fit: cover; */
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  border-radius: 20px 0;
   /* margin-left: 25px; */
 }
 
