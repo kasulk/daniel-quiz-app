@@ -36,14 +36,13 @@ header {
   background-color: var(--secondary-color);
   font-weight: bold;
   color: white;
-  
+
   /* margin-bottom: 5rem; */
 }
 
 header a {
   text-decoration: none;
   color: white;
-  
 }
 
 header h1 {
@@ -57,7 +56,7 @@ header h1 {
 
 main {
   color: var(--primary-color);
-  margin: 20% 0 15vh;
+  margin: 10vh 0;
   /* margin: max(5rem, 20vh) 0 15vh; */
 
   /* padding: 15vh 0; */
@@ -99,7 +98,6 @@ article p.answer {
   padding: 4vh 4vw;
   width: 90%;
   outline: 2px dashed var(--primary-color);
-  
 }
 
 article h2.question {
@@ -177,7 +175,6 @@ footer {
   min-height: 3rem;
   max-height: 5rem;
   color: var(--secondary-accent-color);
-
 }
 
 nav {
@@ -206,22 +203,22 @@ footer li {
   /* width: 100%; */
   height: 100%;
   /* vertical-align: middle; */
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   min-width: 75px;
 }
 
 footer li a {
   height: 100%;
   min-width: 75px;
-  
+
   text-align: center;
   /* vertical-align: middle; */
   text-decoration: none;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,10 +235,8 @@ footer [class^="fa-"] {
 }
 
 footer li[class^="btn-"]:hover {
-  background-color: var(--primary-color)
+  background-color: var(--primary-color);
 }
-
-
 
 /* Profile */
 
@@ -252,7 +247,6 @@ footer li[class^="btn-"]:hover {
 #profile {
   /* display: flex; */
   /* margin-bottom: 10000px; */
-
 }
 
 #profile > div {
@@ -279,8 +273,6 @@ footer li[class^="btn-"]:hover {
   /* padding: 0.1rem; */
 }
 
-
-
 #user,
 #stats,
 #settings-container,
@@ -298,7 +290,6 @@ footer li[class^="btn-"]:hover {
   border-radius: 50%;
   /* margin-left: 25px; */
 }
-
 
 /* Switch */
 /* https://www.w3schools.com/howto/howto_css_switch.asp */
@@ -326,8 +317,8 @@ footer li[class^="btn-"]:hover {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -338,8 +329,8 @@ footer li[class^="btn-"]:hover {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
