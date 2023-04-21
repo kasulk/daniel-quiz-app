@@ -114,10 +114,17 @@ article * {
 }
 
 article button {
-  padding: 1vh 1vw;
+  all: unset;
+  padding: 2vh 2vw;
   background-color: var(--primary-accent-color);
+  border-radius: 5px;
   /* color: var(--secondary-accent-color); */
   color: white;
+}
+
+article button:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
 }
 
 article p.answer {
