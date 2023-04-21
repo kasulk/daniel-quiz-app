@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
 
-  outline: 2px dashed red;
+  /* outline: 2px dashed red; */
 }
 
 html {
@@ -39,6 +39,9 @@ header {
   color: var(--white);
 
   /* margin-bottom: 5rem; */
+
+  /* box-shadow: 0 0 5px 0; */
+  box-shadow: 0 3px 3px -2px black;
 }
 
 header a {
@@ -91,6 +94,8 @@ article.question-card,
 
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  box-shadow: 5px 5px 5px black;
 }
 
 article h2.question,
