@@ -3,6 +3,7 @@
   --secondary-color: #be3144;
   --primary-accent-color: #45567d;
   --secondary-accent-color: blanchedalmond;
+  --white: white;
 }
 
 * {
@@ -35,14 +36,14 @@ header {
   min-height: 5rem;
   background-color: var(--secondary-color);
   font-weight: bold;
-  color: white;
+  color: var(--white);
 
   /* margin-bottom: 5rem; */
 }
 
 header a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 header h1 {
@@ -94,7 +95,7 @@ article.question-card,
 
 article h2.question,
 article p.answer {
-  background-color: white;
+  background-color: var(--white);
   padding: 4vh 4vw;
   width: 90%;
   outline: 2px dashed var(--primary-color);
@@ -119,7 +120,7 @@ article button {
   background-color: var(--primary-accent-color);
   border-radius: 5px;
   /* color: var(--secondary-accent-color); */
-  color: white;
+  color: var(--white);
 }
 
 article button:hover {
@@ -131,7 +132,7 @@ article p.answer {
   font-size: 1.5rem;
   width: 80%;
   /* padding: 3vh 3vw; */
-  /* background-color: white; */
+  /* background-color: var(--white); */
   /* border-radius: 20%; */
   /* border-radius: 20px;
   border-top-left-radius: 0;
@@ -335,7 +336,7 @@ footer li[class^="btn-"]:hover {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--white);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
