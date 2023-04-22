@@ -92,10 +92,8 @@ article.question-card,
 
   text-align: center;
 
-  border-radius: 20px 20px;
-
-  /* border-top-left-radius: 20px; */
-  /* border-bottom-right-radius: 20px; */
+  border-radius: 20px 0 20px 0;
+  /* border-radius: 50% 20% / 10% 40%; */
 
   box-shadow: 5px 5px 5px black;
 }
@@ -109,12 +107,10 @@ article p.answer {
 }
 
 article h2.question {
-  border-radius: 20px;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 20px 0 20px 0;
   /* min-width: 300px; */
   /* margin: 2vh 2vw; */
-  /* border-bottom-right-radius: 0; */
+  /* border-radius: 50% 20% / 10% 40%; */
 }
 
 article * {
