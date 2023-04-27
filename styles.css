@@ -1,10 +1,4 @@
-:root {
-  --primary-color: #3a3d40;
-  --secondary-color: #be3144;
-  --primary-accent-color: #45567d;
-  --secondary-accent-color: blanchedalmond;
-  --white: white;
-}
+@import url("./css/root.css");
 
 * {
   box-sizing: border-box;
@@ -119,16 +113,19 @@ article * {
 
 article button {
   all: unset;
-  padding: 2vh 2vw;
+  padding: 1.6vh 1.6vw;
   background-color: var(--primary-accent-color);
   border-radius: 5px;
   /* color: var(--secondary-accent-color); */
   color: var(--white);
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 article button:hover {
   background-color: var(--secondary-color);
   cursor: pointer;
+  animation: var(--move-up-and-down);
 }
 
 article p.answer {
@@ -168,6 +165,10 @@ article [class^="fa-"] {
   right: 10%;
   font-size: 3rem;
   color: var(--secondary-color);
+}
+
+article .fa-bookmark:hover {
+  animation: var(--move-up-and-down);
 }
 
 /* comment */
@@ -368,4 +369,9 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
 }
