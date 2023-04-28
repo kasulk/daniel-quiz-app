@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.css" />
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <header>
@@ -18,14 +19,22 @@
         <a href="#">Daniel's Quiz App</a>
         <i class="fa-solid fa-bolt"></i>
       </h1>
-  </header>
+    </header>
     <main>
       <section id="question-cards-container">
         <article class="question-card">
           <i class="fa-regular fa-bookmark"></i>
           <h2 class="question">What property flips the axis in flexbox?</h2>
-          <button class="btn-show-answer">Show answer</button>
-          <p class="answer">flex-direction</p>
+          <button
+            class="btn-show-answer"
+            data-js="show-answer-button"
+            data-show-button-id="001"
+          >
+            Show answer
+          </button>
+          <p class="answer" data-js="answer" data-answer-id="002">
+            flex-direction
+          </p>
           <div class="tags-container">
             <span class="category-tag">#html</span>
             <span class="category-tag">#flexbox</span>
@@ -35,8 +44,14 @@
         <article class="question-card">
           <i class="fa-solid fa-bookmark"></i>
           <h2 class="question">Lorem ipsum dolor sit?</h2>
-          <button class="btn-show-answer">Show answer</button>
-          <p class="answer">blue</p>
+          <button
+            class="btn-show-answer"
+            data-js="show-answer-button"
+            data-show-button-id="002"
+          >
+            Show answer
+          </button>
+          <p class="answer" data-js="answer" data-answer-id="002">ipsum</p>
           <div class="tags-container">
             <span class="category-tag">#html</span>
             <span class="category-tag">#flexbox</span>
