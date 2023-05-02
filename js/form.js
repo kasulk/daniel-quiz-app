@@ -1,7 +1,7 @@
 const main = document.querySelector("main");
 const form = document.querySelector("form");
 
-// couldn't get textarea-value from the form so queried them separately...
+// couldn't get textarea-value from the form so query-selected them separately...
 const newQuestionInput = document.querySelector('[data-js="new-question"]');
 const newAnswerInput = document.querySelector('[data-js="new-answer"]');
 
@@ -9,7 +9,7 @@ const newAnswerInput = document.querySelector('[data-js="new-answer"]');
 const formData = new FormData(form);
 const data = Object.fromEntries(formData);
 
-// tried to refactor, but stopped because not mandatory for now...
+// functions for creating elements
 function createNewArticle() {
   const newArticle = document.createElement("article");
   newArticle.classList.add("question-card");
@@ -62,35 +62,25 @@ function createNewTag(newTagValue) {
   return newTag
 }
 
+// eventlistener
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const elements = event.target.elements;
 
   const newArticle = createNewArticle()
   const newTagsContainer = createNewTagsContainer()
-  // const newArticle = document.createElement("article");
-  // newArticle.classList.add("question-card");
+
   main.append(newArticle);
-  // main.append(newArticle);
-  //****** try to refactor...
-  // main.append(createNewArticle());
 
   newArticle.append(createNewBookmarkIcon());
-
   newArticle.append(createNewQuestion(elements.newQuestion.value));
-
   newArticle.append(createNewShowAnswerButton());
-
   newArticle.append(createNewAnswer(elements.newAnswer.value));
-
   newArticle.append(newTagsContainer);
-
   newTagsContainer.append(createNewTag());
-
-  // console.log("main:", main);
 });
 
-// How many characters are left?
+// Character-Counting
 function calcCharLeft(textLength) {
   const element = document.querySelector('[data-js="new-question"]')
   const maxLength = element.getAttribute('maxlength')
