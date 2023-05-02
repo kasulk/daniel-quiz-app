@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.css" />
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="./js/form.js" defer></script>
   </head>
   <body>
     <header>
@@ -22,25 +23,29 @@
     <main>
       <article id="profile-card">
         <form>
+          <label for="tags">Tags</label>
+          <input type="text" name="tags" id="tags" value="testTag" />
+          <button id="submit-button" type="submit">Submit</button>
           <label for="new-question">Your Question</label>
           <textarea
             name="newQuestion"
             id="new-question"
             cols="30"
             rows="10"
-            value="test"
-          ></textarea>
+            data-js="new-question"
+          >
+New Question?</textarea
+          >
           <label for="new-answer">Your Answer</label>
           <textarea
             name="newAnswer"
             id="new-answer"
             cols="30"
             rows="10"
-            value="test"
-          ></textarea>
-          <label for="tags">Tags</label>
-          <input type="text" name="tags" id="tags" value="testTag" />
-          <button id="submit-button" type="submit">Submit</button>
+            data-js="new-answer"
+          >
+New Answer!</textarea
+          >
         </form>
       </article>
     </main>
