@@ -58,16 +58,28 @@ main {
   /* margin: max(5rem, 20vh) 0 15vh; */
 
   /* padding: 15vh 0; */
-}
-
-section#question-cards-container,
-section#profile-card-container {
-  /* position: relative; */
 
   display: flex;
   flex-direction: column;
 
   padding: 5vh 5vw;
+}
+
+section#question-cards-container {
+  display: flex;
+  flex-direction: column;
+
+  /* padding: 5vh 5vw; */
+}
+
+/* obsolot */
+div#profile-card-container {
+  /* position: relative; */
+
+  /* display: flex;
+  flex-direction: column; */
+
+  /* padding: 5vh 5vw; */
 }
 
 article.question-card,
@@ -304,9 +316,8 @@ footer li[class^="btn-"]:hover {
   /* margin-left: 25px; */
 }
 
-/* Switch */
-/* https://www.w3schools.com/howto/howto_css_switch.asp */
 /* The switch - the box around the slider */
+/* https://www.w3schools.com/howto/howto_css_switch.asp */
 .switch {
   position: relative;
   display: inline-block;
