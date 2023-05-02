@@ -12,3 +12,9 @@ form button {
 #submit-button {
   /* width: 40%; */
 }
+
+.character-count-answer,
+.character-count-question {
+  margin-top: 0;
+  align-self: flex-end;
+}
