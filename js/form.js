@@ -27,7 +27,6 @@ function createNewQuestion(newQuestionValue) {
   const newQuestion = document.createElement("h2");
   newQuestion.classList.add("question");
   newQuestion.textContent = newQuestionValue
-  // newQuestion.textContent = elements.newQuestion.value;
   return newQuestion
 }
 
@@ -35,6 +34,7 @@ function createNewShowAnswerButton() {
   const newShowAnswerButton = document.createElement("button");
   newShowAnswerButton.classList.add("btn-show-answer");
   newShowAnswerButton.setAttribute("data-js", "show-answer-button");
+  newShowAnswerButton.setAttribute("data-js-id", "001");  // Bonus
   newShowAnswerButton.textContent = "Show answer";
   return newShowAnswerButton
 }
@@ -58,7 +58,6 @@ function createNewTag(newTagValue) {
   const newTag = document.createElement("span");
   newTag.classList.add("category-tag");
   newTag.textContent = "#" + newTagValue
-  // newTag.textContent = "#" + elements.tags.value;
   return newTag
 }
 
@@ -78,6 +77,7 @@ form.addEventListener("submit", (event) => {
   newArticle.append(createNewAnswer(elements.newAnswer.value));
   newArticle.append(newTagsContainer);
   newTagsContainer.append(createNewTag());
+
 });
 
 // Character-Counting
@@ -102,3 +102,19 @@ newAnswerInput.addEventListener("input", (event) => {
   newAnswerCounterOutput.textContent = numCharLeft + " characters left";
 });
 
+
+
+
+//// Bonus
+// console.log('newButton:',newShowAnswerButton);
+// console.log('newButton:',test);
+
+
+// test.addEventListener('click', () => {
+// // newShowAnswerButton.addEventListener('click', () => {
+//   answer.classList.toggle("hidden");
+//   answer.classList.contains("hidden")
+//     ? (test.textContent = "Show answer")
+//     : (test.textContent = "Hide answer");
+
+// })
