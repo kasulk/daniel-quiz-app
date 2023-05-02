@@ -1,5 +1,5 @@
 const showAnswerButtons = document.querySelectorAll(
-  '[data-js="show-answer-button"'
+  '[data-js="show-answer-button"]'
 );
 
 for (button of showAnswerButtons) {
