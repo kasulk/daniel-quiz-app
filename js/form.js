@@ -5,17 +5,16 @@ const form = document.querySelector("form");
 const newQuestionInput = document.querySelector('[data-js="new-question"]');
 const newAnswerInput = document.querySelector('[data-js="new-answer"]');
 
-// console.log("test newQuestion:", newQuestion.value);
-// console.log("test newAnwer   :", newAnswer.value);
-
-console.log("form:", form);
-
 // not used yet...
 // const formData = new FormData(form);
 // const data = Object.fromEntries(formData);
 
-// console.log("data:", data);
-
+// tried to refactor, but stopped because not mandatory for now...
+function createNewArticle() {
+  const newArticle = document.createElement("article");
+  newArticle.classList.add("question-card");
+  return newArticle;
+}
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const elements = event.target.elements;
@@ -23,7 +22,8 @@ form.addEventListener("submit", (event) => {
   const newArticle = document.createElement("article");
   newArticle.classList.add("question-card");
   main.append(newArticle);
-  // console.log("newMain:", main);
+  //****** try to refactor...
+  // main.append(createNewArticle());
 
   const newBookmarkIcon = document.createElement("i");
   newBookmarkIcon.classList.add("fa-regular", "fa-bookmark");
@@ -33,7 +33,6 @@ form.addEventListener("submit", (event) => {
   const newQuestion = document.createElement("h2");
   newQuestion.classList.add("question");
   newQuestion.textContent = elements.newQuestion.value;
-  // console.log("newHeading:", elements.newQuestion.value);
   newArticle.append(newQuestion);
 
   const newShowAnswerButton = document.createElement("button");
@@ -54,7 +53,6 @@ form.addEventListener("submit", (event) => {
 
   const newTag = document.createElement("span");
   newTag.classList.add("category-tag");
-  // newTag.textContent = elements.tags.value;
   newTag.textContent = "#" + elements.tags.value;
   newTagsContainer.append(newTag);
 
