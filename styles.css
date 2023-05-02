@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
 
-  outline: 2px dashed red;
+  /* outline: 2px dashed red; */
 }
 
 html {
@@ -321,8 +321,9 @@ footer li[class^="btn-"]:hover {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+
+  width: 40px;
+  height: 20px;
 }
 
 /* Hide default HTML checkbox */
@@ -340,7 +341,8 @@ footer li[class^="btn-"]:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--secondary-color);
+  /* background-color: #ccc; */
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -348,10 +350,14 @@ footer li[class^="btn-"]:hover {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
+
+  height: 12px;
+  width: 12px;
+
+  /* left: 4px; */
+  left: 0px;
   bottom: 4px;
+
   background-color: var(--white);
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -373,7 +379,7 @@ input:checked + .slider:before {
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 20px;
 
   margin: 0;
 }
