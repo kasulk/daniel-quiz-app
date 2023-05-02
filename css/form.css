@@ -13,8 +13,12 @@ form button {
   /* width: 40%; */
 }
 
-.character-count-answer,
-.character-count-question {
+[data-js="new-question"] + p,
+[data-js="new-answer"] + p {
   margin-top: 0;
   align-self: flex-end;
+}
+
+textarea {
+  margin: 0 !important;
 }
