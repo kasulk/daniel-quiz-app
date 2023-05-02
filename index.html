@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.css" />
 
     <link rel="stylesheet" href="styles.css" />
-    <script src="index.js" defer></script>
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
     <header>
@@ -23,7 +23,7 @@
     <main>
       <section id="question-cards-container">
         <article class="question-card">
-          <i class="fa-regular fa-bookmark"></i>
+          <i class="fa-regular fa-bookmark" data-js="bookmark"></i>
           <h2 class="question">What property flips the axis in flexbox?</h2>
           <button
             class="btn-show-answer"
@@ -32,7 +32,7 @@
           >
             Show answer
           </button>
-          <p class="answer" data-js="answer" data-answer-id="001" hidden>
+          <p class="answer hidden" data-js="answer" data-answer-id="002">
             flex-direction
           </p>
           <div class="tags-container">
@@ -51,7 +51,9 @@
           >
             Show answer
           </button>
-          <p class="answer" data-js="answer" data-answer-id="002" hidden>ipsum</p>
+          <p class="answer hidden" data-js="answer" data-answer-id="002">
+            ipsum
+          </p>
           <div class="tags-container">
             <span class="category-tag">#html</span>
             <span class="category-tag">#flexbox</span>

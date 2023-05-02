@@ -140,6 +140,10 @@ article button:hover {
   animation: var(--move-up-and-down);
 }
 
+article button:active {
+  background-color: var(--secondary-active-color);
+}
+
 article p.answer {
   font-size: 1.5rem;
   width: 80%;
@@ -389,6 +393,6 @@ input:checked + .slider:before {
 }
 
 .hidden {
-  visibility: hidden;
+  /* visibility: hidden; */
   display: none;
 }
