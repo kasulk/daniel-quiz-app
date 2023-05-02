@@ -14,4 +14,9 @@ bookmark.addEventListener("click", () => {
 
 showAnswerButton.addEventListener("click", () => {
   answer.classList.toggle("hidden");
+  answer.classList.contains("hidden")
+    ? (showAnswerButton.textContent = "Show answer")
+    : (showAnswerButton.textContent = "Hide answer");
+
+  //   console.log("answerClasslist:", answer.classList);
 });
