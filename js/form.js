@@ -62,14 +62,17 @@ form.addEventListener("submit", (event) => {
 function charsLeft(element) {}
 
 newQuestionInput.addEventListener("input", (event) => {
-  // console.log("questionValue:", event.target.value.length);
-
   const charCount = document.querySelector(
     '[data-js="character-count-question"]'
   );
   const numCharLeft = 150 - event.target.value.length;
   charCount.textContent = numCharLeft + " characters left";
-  // console.log("charCountQuestion:", charCountQuestion);
+});
 
-  // charCountQuestion.textContent = 150 - event.target.value.length;
+newAnswerInput.addEventListener("input", (event) => {
+  const charCount = document.querySelector(
+    '[data-js="character-count-answer"]'
+  );
+  const numCharLeft = 150 - event.target.value.length;
+  charCount.textContent = numCharLeft + " characters left";
 });
