@@ -6,8 +6,8 @@ const newQuestionInput = document.querySelector('[data-js="new-question"]');
 const newAnswerInput = document.querySelector('[data-js="new-answer"]');
 
 // not used yet...
-const formData = new FormData(form);
-const data = Object.fromEntries(formData);
+// const formData = new FormData(form);
+// const data = Object.fromEntries(formData);
 
 // functions for creating elements
 function createNewArticle() {
@@ -20,54 +20,56 @@ function createNewBookmarkIcon() {
   const newBookmarkIcon = document.createElement("i");
   newBookmarkIcon.classList.add("fa-regular", "fa-bookmark");
   newBookmarkIcon.setAttribute("data-js", "bookmark");
-  return newBookmarkIcon
+  return newBookmarkIcon;
 }
 
 function createNewQuestion(newQuestionValue) {
   const newQuestion = document.createElement("h2");
   newQuestion.classList.add("question");
-  newQuestion.textContent = newQuestionValue
-  return newQuestion
+  newQuestion.textContent = newQuestionValue;
+  return newQuestion;
 }
 
 function createNewShowAnswerButton() {
   const newShowAnswerButton = document.createElement("button");
   newShowAnswerButton.classList.add("btn-show-answer");
   newShowAnswerButton.setAttribute("data-js", "show-answer-button");
-  newShowAnswerButton.setAttribute("data-js-id", "001");  // Bonus
+  newShowAnswerButton.setAttribute("data-js-id", "001"); // Bonus
   newShowAnswerButton.textContent = "Show answer";
-  return newShowAnswerButton
+  return newShowAnswerButton;
 }
 
 function createNewAnswer(newAnswerValue) {
   const newAnswer = document.createElement("p");
   newAnswer.classList.add("answer", "hidden");
   newAnswer.setAttribute("data-js", "answer");
-  newAnswer.textContent = newAnswerValue
-  return newAnswer
+  newAnswer.textContent = newAnswerValue;
+  return newAnswer;
 }
 
 function createNewTagsContainer() {
   const newTagsContainer = document.createElement("div");
   newTagsContainer.classList.add("tags-container");
-  return newTagsContainer
-  
+  return newTagsContainer;
 }
 
 function createNewTag(newTagValue) {
   const newTag = document.createElement("span");
   newTag.classList.add("category-tag");
-  newTag.textContent = "#" + newTagValue
-  return newTag
+  newTag.textContent = "#" + newTagValue;
+  return newTag;
 }
 
+// **************
 // eventlistener
+
+// const test =
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const elements = event.target.elements;
 
-  const newArticle = createNewArticle()
-  const newTagsContainer = createNewTagsContainer()
+  const newArticle = createNewArticle();
+  const newTagsContainer = createNewTagsContainer();
 
   main.append(newArticle);
 
@@ -76,39 +78,40 @@ form.addEventListener("submit", (event) => {
   newArticle.append(createNewShowAnswerButton());
   newArticle.append(createNewAnswer(elements.newAnswer.value));
   newArticle.append(newTagsContainer);
-  newTagsContainer.append(createNewTag());
+  newTagsContainer.append(createNewTag(elements.tags.value));
 
+  // return "baaaam!";
 });
 
 // Character-Counting
-function calcCharLeft(textLength) {
-  const element = document.querySelector('[data-js="new-question"]')
-  const maxLength = element.getAttribute('maxlength')
-  
-  return maxLength - textLength
+function calcCharsLeft(textLength) {
+  const element = document.querySelector('[data-js="new-question"]');
+  const maxLength = element.getAttribute("maxlength");
+
+  return maxLength - textLength;
 }
 
 newQuestionInput.addEventListener("input", (event) => {
-  const newQuestionCounterOutput = document.querySelector('[data-js="new-question"] + p')
-  const numCharLeft = calcCharLeft(event.target.value.length)
+  const newQuestionCounterOutput = document.querySelector(
+    '[data-js="new-question"] + p'
+  );
+  const numCharLeft = calcCharsLeft(event.target.value.length);
 
   newQuestionCounterOutput.textContent = numCharLeft + " characters left";
 });
 
 newAnswerInput.addEventListener("input", (event) => {
-  const newAnswerCounterOutput = document.querySelector('[data-js="new-answer"] + p')
-  const numCharLeft = calcCharLeft(event.target.value.length)
+  const newAnswerCounterOutput = document.querySelector(
+    '[data-js="new-answer"] + p'
+  );
+  const numCharLeft = calcCharsLeft(event.target.value.length);
 
   newAnswerCounterOutput.textContent = numCharLeft + " characters left";
 });
 
-
-
-
 //// Bonus
 // console.log('newButton:',newShowAnswerButton);
 // console.log('newButton:',test);
-
 
 // test.addEventListener('click', () => {
 // // newShowAnswerButton.addEventListener('click', () => {
