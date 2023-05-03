@@ -1,3 +1,5 @@
+console.clear();
+
 const main = document.querySelector("main");
 const form = document.querySelector("form");
 
@@ -16,8 +18,11 @@ calcNewQuestionCharsLeft();
 calcNewAnswerCharsLeft();
 
 // not used yet...
-// const formData = new FormData(form);
-// const data = Object.fromEntries(formData);
+const formData = new FormData(form);
+const data = Object.fromEntries(formData);
+
+function resetInputs() {}
+// resetInputs();
 
 // functions for creating elements
 function createNewArticle() {
@@ -30,6 +35,11 @@ function createNewBookmarkIcon() {
   const newBookmarkIcon = document.createElement("i");
   newBookmarkIcon.classList.add("fa-regular", "fa-bookmark");
   newBookmarkIcon.setAttribute("data-js", "bookmark");
+  // add eventlistener to bookmark-icon
+  newBookmarkIcon.addEventListener("click", () => {
+    newBookmarkIcon.classList.toggle("fa-solid");
+    newBookmarkIcon.classList.toggle("fa-regular");
+  });
   return newBookmarkIcon;
 }
 
@@ -46,14 +56,26 @@ function createNewShowAnswerButton() {
   newShowAnswerButton.setAttribute("data-js", "show-answer-button");
   newShowAnswerButton.setAttribute("data-js-id", "001"); // Bonus
   newShowAnswerButton.textContent = "Show answer";
+  // Bonus: Add Show/Hide functionality to newCard
+  newShowAnswerButton.addEventListener("click", () => {
+    // Get hold of newAnswer from createNewAnswer-function...
+    storeNewAnswer.classList.toggle("hidden");
+    storeNewAnswer.classList.contains("hidden")
+      ? (newShowAnswerButton.textContent = "Show answer")
+      : (newShowAnswerButton.textContent = "Hide answer");
+  });
   return newShowAnswerButton;
 }
 
+let storeNewAnswer;
 function createNewAnswer(newAnswerValue) {
   const newAnswer = document.createElement("p");
   newAnswer.classList.add("answer", "hidden");
   newAnswer.setAttribute("data-js", "answer");
   newAnswer.textContent = newAnswerValue;
+  // bonus
+  // store newAnswer in variable to make it accessible outside of the function (for the eventlistener of the newShowAnswerButton)
+  storeNewAnswer = newAnswer;
   return newAnswer;
 }
 
@@ -73,7 +95,6 @@ function createNewTag(newTagValue) {
 // **************
 // eventlistener
 
-// const test =
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const elements = event.target.elements;
@@ -90,7 +111,9 @@ form.addEventListener("submit", (event) => {
   newArticle.append(newTagsContainer);
   newTagsContainer.append(createNewTag(elements.tags.value));
 
-  // return "baaaam!";
+  // elements.newQuestion.value = "";
+  // elements.newAnswer.value = "";
+  // elements.tags.value = "";
 });
 
 // Character-Counting
@@ -109,16 +132,3 @@ function calcNewAnswerCharsLeft() {
 
 newQuestionInput.addEventListener("input", calcNewQuestionCharsLeft);
 newAnswerInput.addEventListener("input", calcNewAnswerCharsLeft);
-
-//// Bonus
-// console.log('newButton:',newShowAnswerButton);
-// console.log('newButton:',test);
-
-// test.addEventListener('click', () => {
-// // newShowAnswerButton.addEventListener('click', () => {
-//   answer.classList.toggle("hidden");
-//   answer.classList.contains("hidden")
-//     ? (test.textContent = "Show answer")
-//     : (test.textContent = "Hide answer");
-
-// })
