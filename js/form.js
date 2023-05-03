@@ -46,6 +46,14 @@ function createNewShowAnswerButton() {
   newShowAnswerButton.setAttribute("data-js", "show-answer-button");
   newShowAnswerButton.setAttribute("data-js-id", "001"); // Bonus
   newShowAnswerButton.textContent = "Show answer";
+  // Bonus: Add Show/Hide functionality to newCard
+  newShowAnswerButton.addEventListener("click", () => {
+    // Get hold of newAnswer...
+    newAnswer.classList.toggle("hidden");
+    newAnswer.classList.contains("hidden")
+      ? (newShowAnswerButton.textContent = "Show answer")
+      : (newShowAnswerButton.textContent = "Hide answer");
+  });
   return newShowAnswerButton;
 }
 
@@ -73,7 +81,6 @@ function createNewTag(newTagValue) {
 // **************
 // eventlistener
 
-// const test =
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const elements = event.target.elements;
@@ -89,8 +96,6 @@ form.addEventListener("submit", (event) => {
   newArticle.append(createNewAnswer(elements.newAnswer.value));
   newArticle.append(newTagsContainer);
   newTagsContainer.append(createNewTag(elements.tags.value));
-
-  // return "baaaam!";
 });
 
 // Character-Counting
