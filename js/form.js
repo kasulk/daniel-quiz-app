@@ -94,20 +94,16 @@ form.addEventListener("submit", (event) => {
 });
 
 // Character-Counting
-function calcCharsLeft(textLength) {
-  const element = document.querySelector('[data-js="new-question"]');
-  const maxLength = element.getAttribute("maxlength");
-
-  return maxLength - textLength;
-}
 
 function calcNewQuestionCharsLeft() {
-  const numCharLeft = calcCharsLeft(newQuestionInput.value.length);
+  const maxLength = newQuestionInput.getAttribute("maxlength");
+  const numCharLeft = maxLength - newQuestionInput.value.length;
   newQuestionCounterOutput.textContent = numCharLeft + " characters left";
 }
 
 function calcNewAnswerCharsLeft() {
-  const numCharLeft = calcCharsLeft(newAnswerInput.value.length);
+  const maxLength = newAnswerInput.getAttribute("maxlength");
+  const numCharLeft = maxLength - newAnswerInput.value.length;
   newAnswerCounterOutput.textContent = numCharLeft + " characters left";
 }
 
