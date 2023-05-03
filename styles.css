@@ -354,8 +354,8 @@ footer li[class^="btn-"]:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--secondary-color);
-  /* background-color: #ccc; */
+  /* background-color: var(--secondary-color); */
+  background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -368,7 +368,7 @@ footer li[class^="btn-"]:hover {
   width: 12px;
 
   /* left: 4px; */
-  left: 0px;
+  left: 1px;
   bottom: 4px;
 
   background-color: var(--white);
@@ -399,6 +399,10 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.profile-card-dark {
+  background-color: black;
 }
 
 .hidden {

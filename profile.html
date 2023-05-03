@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.css" />
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="./js/profile.js"></script>
   </head>
   <body>
     <header>
@@ -20,7 +21,7 @@
       </h1>
     </header>
     <main>
-      <article id="profile-card">
+      <article id="profile-card" data-js="profile-card">
         <div id="profile-container">
           <section id="profile">
             <h3>Profile</h3>
@@ -58,7 +59,7 @@
             <div id="settings-container">
               <h4>Dark Mode</h4>
               <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" data-js="darkmode-switch" />
                 <span class="slider round"></span>
               </label>
             </div>
