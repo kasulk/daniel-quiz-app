@@ -5,6 +5,16 @@ const form = document.querySelector("form");
 const newQuestionInput = document.querySelector('[data-js="new-question"]');
 const newAnswerInput = document.querySelector('[data-js="new-answer"]');
 
+const newQuestionCounterOutput = document.querySelector(
+  '[data-js="new-question"] + p'
+);
+const newAnswerCounterOutput = document.querySelector(
+  '[data-js="new-answer"] + p'
+);
+
+calcNewQuestionCharsLeft();
+calcNewAnswerCharsLeft();
+
 // not used yet...
 // const formData = new FormData(form);
 // const data = Object.fromEntries(formData);
@@ -84,30 +94,21 @@ form.addEventListener("submit", (event) => {
 });
 
 // Character-Counting
-function calcCharsLeft(textLength) {
-  const element = document.querySelector('[data-js="new-question"]');
-  const maxLength = element.getAttribute("maxlength");
 
-  return maxLength - textLength;
+function calcNewQuestionCharsLeft() {
+  const maxLength = newQuestionInput.getAttribute("maxlength");
+  const numCharLeft = maxLength - newQuestionInput.value.length;
+  newQuestionCounterOutput.textContent = numCharLeft + " characters left";
 }
 
-newQuestionInput.addEventListener("input", (event) => {
-  const newQuestionCounterOutput = document.querySelector(
-    '[data-js="new-question"] + p'
-  );
-  const numCharLeft = calcCharsLeft(event.target.value.length);
-
-  newQuestionCounterOutput.textContent = numCharLeft + " characters left";
-});
-
-newAnswerInput.addEventListener("input", (event) => {
-  const newAnswerCounterOutput = document.querySelector(
-    '[data-js="new-answer"] + p'
-  );
-  const numCharLeft = calcCharsLeft(event.target.value.length);
-
+function calcNewAnswerCharsLeft() {
+  const maxLength = newAnswerInput.getAttribute("maxlength");
+  const numCharLeft = maxLength - newAnswerInput.value.length;
   newAnswerCounterOutput.textContent = numCharLeft + " characters left";
-});
+}
+
+newQuestionInput.addEventListener("input", calcNewQuestionCharsLeft);
+newAnswerInput.addEventListener("input", calcNewAnswerCharsLeft);
 
 //// Bonus
 // console.log('newButton:',newShowAnswerButton);
