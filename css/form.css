@@ -1,0 +1,24 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form button {
+  /* width: 80%; */
+  /* width: 100px; */
+}
+
+#submit-button {
+  /* width: 40%; */
+}
+
+[data-js="new-question"] + p,
+[data-js="new-answer"] + p {
+  margin-top: 0;
+  align-self: flex-end;
+}
+
+textarea {
+  margin: 0 !important;
+}

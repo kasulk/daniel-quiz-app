@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniels Quiz App - Profile</title>
+
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./js/form.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <i class="fa-solid fa-bolt"></i>
+        <a href="index.html">Daniel's Quiz App</a>
+        <i class="fa-solid fa-bolt"></i>
+      </h1>
+    </header>
+    <main>
+      <article id="profile-card">
+        <form>
+          <label for="new-question">Your Question</label>
+          <textarea
+            name="newQuestion"
+            id="new-question"
+            cols="30"
+            rows="10"
+            data-js="new-question"
+            maxlength="150"
+          >
+How many psychiatrists does it take to change a lightbulb?</textarea
+          >
+          <p>150 characters left</p>
+          <!-- <p
+            class="character-count-question"
+            data-js="character-count-question"
+          >
+            150 characters left
+          </p> -->
+          <label for="new-answer">Your Answer</label>
+          <textarea
+            name="newAnswer"
+            id="new-answer"
+            cols="30"
+            rows="10"
+            data-js="new-answer"
+            maxlength="150"
+          >
+Only one, but the lightbulb has got to really want to change.</textarea
+          >
+          <p>150 characters left</p>
+          <!-- <p class="character-count-answer" data-js="character-count-answer">
+            150 characters left
+          </p> -->
+          <label for="tags">Tags</label>
+          <input type="text" name="tags" id="tags" value="testTag" />
+          <button id="submit-button" type="submit">Submit</button>
+        </form>
+      </article>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li class="btn-home">
+            <a href="index.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li class="btn-add current">
+            <a href="#">
+              <i class="fa-solid fa-plus"></i>
+            </a>
+          </li>
+          <li class="btn-bookmark">
+            <a href="bookmarks.html">
+              <i class="fa-solid fa-bookmark"></i>
+            </a>
+          </li>
+          <li class="btn-profile">
+            <a href="profile.html">
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

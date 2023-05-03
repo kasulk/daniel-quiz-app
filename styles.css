@@ -1,4 +1,5 @@
 @import url("./css/root.css");
+@import url("./css/form.css");
 
 * {
   box-sizing: border-box;
@@ -132,15 +133,23 @@ article button {
   color: var(--white);
   font-weight: bold;
   font-size: 1.4rem;
+
+  /* try to make the animation ease out on de-hover*/
+
+  /* works, but animation stops anywhere... */
+  /* animation: var(--move-up-and-down);
+  animation-play-state: paused; */
 }
 
 article button:hover {
   background-color: var(--secondary-color);
   cursor: pointer;
+
   animation: var(--move-up-and-down);
 }
 
-article button:active {
+article button:active,
+nav li:active {
   background-color: var(--secondary-active-color);
 }
 
