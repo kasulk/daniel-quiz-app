@@ -32,6 +32,11 @@ function createNewBookmarkIcon() {
   const newBookmarkIcon = document.createElement("i");
   newBookmarkIcon.classList.add("fa-regular", "fa-bookmark");
   newBookmarkIcon.setAttribute("data-js", "bookmark");
+  // add eventlistener to bookmark-icon
+  newBookmarkIcon.addEventListener("click", () => {
+    newBookmarkIcon.classList.toggle("fa-solid");
+    newBookmarkIcon.classList.toggle("fa-regular");
+  });
   return newBookmarkIcon;
 }
 
