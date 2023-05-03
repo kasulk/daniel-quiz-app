@@ -18,8 +18,11 @@ calcNewQuestionCharsLeft();
 calcNewAnswerCharsLeft();
 
 // not used yet...
-// const formData = new FormData(form);
-// const data = Object.fromEntries(formData);
+const formData = new FormData(form);
+const data = Object.fromEntries(formData);
+
+function resetInputs() {}
+// resetInputs();
 
 // functions for creating elements
 function createNewArticle() {
@@ -64,6 +67,7 @@ function createNewShowAnswerButton() {
   return newShowAnswerButton;
 }
 
+let storeNewAnswer;
 function createNewAnswer(newAnswerValue) {
   const newAnswer = document.createElement("p");
   newAnswer.classList.add("answer", "hidden");
@@ -74,7 +78,6 @@ function createNewAnswer(newAnswerValue) {
   storeNewAnswer = newAnswer;
   return newAnswer;
 }
-let storeNewAnswer;
 
 function createNewTagsContainer() {
   const newTagsContainer = document.createElement("div");
@@ -107,6 +110,10 @@ form.addEventListener("submit", (event) => {
   newArticle.append(createNewAnswer(elements.newAnswer.value));
   newArticle.append(newTagsContainer);
   newTagsContainer.append(createNewTag(elements.tags.value));
+
+  // elements.newQuestion.value = "";
+  // elements.newAnswer.value = "";
+  // elements.tags.value = "";
 });
 
 // Character-Counting
@@ -125,16 +132,3 @@ function calcNewAnswerCharsLeft() {
 
 newQuestionInput.addEventListener("input", calcNewQuestionCharsLeft);
 newAnswerInput.addEventListener("input", calcNewAnswerCharsLeft);
-
-//// Bonus
-// console.log('newButton:',newShowAnswerButton);
-// console.log('newButton:',test);
-
-// test.addEventListener('click', () => {
-// // newShowAnswerButton.addEventListener('click', () => {
-//   answer.classList.toggle("hidden");
-//   answer.classList.contains("hidden")
-//     ? (test.textContent = "Show answer")
-//     : (test.textContent = "Hide answer");
-
-// })
