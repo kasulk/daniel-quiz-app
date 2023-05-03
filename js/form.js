@@ -5,6 +5,16 @@ const form = document.querySelector("form");
 const newQuestionInput = document.querySelector('[data-js="new-question"]');
 const newAnswerInput = document.querySelector('[data-js="new-answer"]');
 
+const newQuestionCounterOutput = document.querySelector(
+  '[data-js="new-question"] + p'
+);
+const newAnswerCounterOutput = document.querySelector(
+  '[data-js="new-answer"] + p'
+);
+
+calcNewQuestionCharsLeft();
+calcNewAnswerCharsLeft();
+
 // not used yet...
 // const formData = new FormData(form);
 // const data = Object.fromEntries(formData);
@@ -91,23 +101,18 @@ function calcCharsLeft(textLength) {
   return maxLength - textLength;
 }
 
-newQuestionInput.addEventListener("input", (event) => {
-  const newQuestionCounterOutput = document.querySelector(
-    '[data-js="new-question"] + p'
-  );
-  const numCharLeft = calcCharsLeft(event.target.value.length);
-
+function calcNewQuestionCharsLeft() {
+  const numCharLeft = calcCharsLeft(newQuestionInput.value.length);
   newQuestionCounterOutput.textContent = numCharLeft + " characters left";
-});
+}
 
-newAnswerInput.addEventListener("input", (event) => {
-  const newAnswerCounterOutput = document.querySelector(
-    '[data-js="new-answer"] + p'
-  );
-  const numCharLeft = calcCharsLeft(event.target.value.length);
-
+function calcNewAnswerCharsLeft() {
+  const numCharLeft = calcCharsLeft(newAnswerInput.value.length);
   newAnswerCounterOutput.textContent = numCharLeft + " characters left";
-});
+}
+
+newQuestionInput.addEventListener("input", calcNewQuestionCharsLeft);
+newAnswerInput.addEventListener("input", calcNewAnswerCharsLeft);
 
 //// Bonus
 // console.log('newButton:',newShowAnswerButton);
