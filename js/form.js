@@ -1,3 +1,5 @@
+console.clear();
+
 const main = document.querySelector("main");
 const form = document.querySelector("form");
 
@@ -48,9 +50,9 @@ function createNewShowAnswerButton() {
   newShowAnswerButton.textContent = "Show answer";
   // Bonus: Add Show/Hide functionality to newCard
   newShowAnswerButton.addEventListener("click", () => {
-    // Get hold of newAnswer...
-    newAnswer.classList.toggle("hidden");
-    newAnswer.classList.contains("hidden")
+    // Get hold of newAnswer from createNewAnswer-function...
+    storeNewAnswer.classList.toggle("hidden");
+    storeNewAnswer.classList.contains("hidden")
       ? (newShowAnswerButton.textContent = "Show answer")
       : (newShowAnswerButton.textContent = "Hide answer");
   });
@@ -62,8 +64,12 @@ function createNewAnswer(newAnswerValue) {
   newAnswer.classList.add("answer", "hidden");
   newAnswer.setAttribute("data-js", "answer");
   newAnswer.textContent = newAnswerValue;
+  // bonus
+  // store newAnswer in variable to make it accessible outside of the function (for the eventlistener of the newShowAnswerButton)
+  storeNewAnswer = newAnswer;
   return newAnswer;
 }
+let storeNewAnswer;
 
 function createNewTagsContainer() {
   const newTagsContainer = document.createElement("div");
