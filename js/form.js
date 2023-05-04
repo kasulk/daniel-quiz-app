@@ -7,6 +7,13 @@ const form = document.querySelector("form");
 const newQuestionInput = document.querySelector('[data-js="new-question"]');
 const newAnswerInput = document.querySelector('[data-js="new-answer"]');
 
+// test values
+newQuestionInput.value =
+  "How many psychiatrists does it take to change a lightbulb?";
+newAnswerInput.value =
+  "Only one, but the lightbulb has got to really want to change.";
+tags.value = "funny";
+
 const newQuestionCounterOutput = document.querySelector(
   '[data-js="new-question"] + p'
 );
@@ -20,9 +27,6 @@ calcNewAnswerCharsLeft();
 // not used yet...
 const formData = new FormData(form);
 const data = Object.fromEntries(formData);
-
-function resetInputs() {}
-// resetInputs();
 
 // functions for creating elements
 function createNewArticle() {
@@ -110,6 +114,9 @@ form.addEventListener("submit", (event) => {
   newArticle.append(createNewAnswer(elements.newAnswer.value));
   newArticle.append(newTagsContainer);
   newTagsContainer.append(createNewTag(elements.tags.value));
+
+  form.reset();
+  newQuestionInput.focus();
 
   // elements.newQuestion.value = "";
   // elements.newAnswer.value = "";
