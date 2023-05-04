@@ -7,7 +7,7 @@ const form = document.querySelector("form");
 const newQuestionInput = document.querySelector('[data-js="new-question"]');
 const newAnswerInput = document.querySelector('[data-js="new-answer"]');
 
-// test values
+// test development values
 newQuestionInput.value =
   "How many psychiatrists does it take to change a lightbulb?";
 newAnswerInput.value =
@@ -117,10 +117,8 @@ form.addEventListener("submit", (event) => {
 
   form.reset();
   newQuestionInput.focus();
-
-  // elements.newQuestion.value = "";
-  // elements.newAnswer.value = "";
-  // elements.tags.value = "";
+  calcNewAnswerCharsLeft();
+  calcNewQuestionCharsLeft();
 });
 
 // Character-Counting
